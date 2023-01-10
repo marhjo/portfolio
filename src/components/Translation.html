@@ -1,0 +1,232 @@
+<script>
+  const languageSwitchElement = document.getElementById("translate_button");
+  const englishElement = document.getElementById("english");
+  const danishElement = document.getElementById("danish");
+
+  const langs = {
+    // English Language
+    en: {
+      heroMe: `I'm a <span class="primary">Multimedia Design Student</span>`,
+      heroDesc: "Mark Hjort - Portfolio",
+      aboutmeTitle: "About Me",
+      aboutmeDesc:
+        "I am Mark, a Multimedia Design Student who currently studies at Copenhagen School of Design and Technology. Before I started out with Multimedia Design, I was unsure what I wanted to do, which is why I started out with Biology, but quickly figured out that I would require more creative stimuli, hence why I dropped out and started with Multimedia Design as soon as I could. <br> <br> In my spare time, I produce my own music, and play games that I enjoy. This is once again another way that I express myself creatively, and I hope to be able to use my music and creative eye in future projects that I create in my professional career. <br> <br>",
+
+      project1Title: `Project 1 - Olyx<span class="primary">.</span>`,
+      project2Title: "Project 2 - Baking",
+      project3Title: "Project 3 - Styleable",
+      project4Title: "Project 4 - Meeting",
+      project5Title: "Project 5 - Gravy",
+      project6Title: "Project 6 - Portfolio",
+      viewProject: "View Project",
+
+      p1h1: "First Project",
+      p1h2: "Requirements",
+      p1h3: "Takeaways",
+      p1p1: "Olyx being my first web development project was a learning experience like no other, and the objective of the project was to give me the foundations for the rest of my education. This first project provided a basic introduction to the most used tools in a multimedia designer's toolbox.",
+      p1p2: "I was introduced to the basic professional concepts in the field of digital design, such as user interfaces, digital content production, digital communication and responsive web design, while also learning about the process of setting up a web page with the use of html and css, to get hands-on experience with preparation of graphical elements and images in programs like Photoshop.",
+      p1p3: "For this project, I was given a specific wireframe to follow for the layout of the site. The website had to have a navigation bar, paragraphs and headlines all placed within a specified grid layout.",
+      p1p4: "Other requirements for this project entailed using a web font from googlefonts, where I decided to use 'JetBrains Mono' as I found it to be suitable for a tech company and easily readable.",
+      p1p5: "During the creation of 'Project - 1 Olyx', the main challenges or issues were the lack of experience, and how I had to learn a lot of new technologies throughout this project, however, as I had some prior experience with website creation, I was able to create a site that I can look back at and feel proud of.",
+
+      p2h1: "Stylized Website",
+      p2h2: "Laws of UX / UI",
+      p2h3: "Figma & Fonts",
+      p2p1: "During the basic web theme, I was later assigned to make a stylized website. I was given the choice between multiple styles, ranging from postmodernism to minimalism, whereas I picked the style called Brutalism. Brutalism, also known as Anti-Design, is a style where you take the standardised design choices and laws such as gestalt, and completely forget about them.",
+      p2p2: "In this project I was taught about the different laws and principles of UX / UI, and how to use them to create a good user experience, but as I was creating a site using Brutalism, I did not get to use these design philosophies for this project specifically. Some of the laws of UX / UI I was taught were; Law of Prägnanz, Proximity & Common Region, which are all under the Laws of Gestalt.",
+      p2p3: "The site is supposed to resemble a note / piece of paper, that we have all scribbled a recipe onto, which is why it does not allow you to scroll, and the only things represented on the page are the recipes themselves and small doodles. ",
+      p2p4: "What I learned from this project was how to create my own fonts using illustrator, how I edit pictures using Photoshop and how I can create my own wireframes and sketches using Figma or Adobe XD. I however prefer Figma, as I have more experience with that, compared to my experience with Adobe XD.",
+
+      p3h1: "UX / UI Today",
+      p3h2: "Phases",
+      p3h3: "Learning Experience",
+      p3p1: "UX / UI is today a fixed component of the development of digital user interfaces and user experiences. This project was made in the basic UX theme, to give me a basic understanding of the interactions between users and user interfaces, as well as which theories, tools and methods I can use for research, design and testing in a digital product development cycle.",
+      p3p2: "Understanding this interaction is important as design choices and product development are based on concrete insights about real users instead of gut feelings and immediate assumptions, which is why I was tasked to create a design for a web store that would have a unique selling point.",
+      p3p3: "This project, which I will refer to as Styleable, I was taught about the different phases of creating a site from the ground up. Going from the concept phase, all the way to pitching it for a customer.",
+      p3p4: "During the concept phase, we had to conceptualise a web store, with a set sender (the seller), a receiver (the buyer), a targeted audience and the unique selling point. We used different idea generation methods, such as the Art Gallery method.",
+      p3p5: "Which led me to the research phase. During the research phase, I was taught about different methods of research gathering, such as Desk Research, Observations, Interviews and Surveys. As it is important to have the proper research behind you, when further developing the product you have from the concept phase.",
+      p3p6: "After I felt I had the proper research, I returned back to my concept phase, which also worked as a development phase, as this was where I created my second concept, which was the one that I used during my testing phase. During this, I used Figma, Photoshop and Adobe XD in conjunction with each other, to create a proper looking web store app.",
+      p3p7: "The last phase I worked with was the testing and pitching phase, where I was taught about the different ways of testing websites and concepts, such as the 5 second test, and general user testing. This was where I was able to get user feedback to further develop and change the project in accordance to the customer, which we lastly got to pitch in front of.",
+      p3p8: "What I learned from this project was the general development cycle from idea to pitch, and how I in the future can use it to create my own projects, and work alongside users to create the best user experience. I also got to experience how to pitch a concept to a potential buyer, and how I can in the future pitch better with a more direct approach.",
+
+      p4h1: "Introduction to Javascript",
+      p4h2: "Starting off",
+      p4h3: "Multiple elements",
+      p4p1: "In this project, I was introduced to the programming language javascript, which is an indispensable part of the modern internet and is used to code advanced and dynamic websites as well as create interactive elements such as burger menus, slideshows, snap scrolls etc.",
+      p4p2: "I chose to use javascript together with css animations to create a small game. My game had to have a concept and an idea that I came up with myself and I had to design all elements myself and the code for the game had to be made from scratch.",
+      p4p3: "To start off with, I was introduced to different word association techniques, which I used to create the majority of my ideas. Where I linked up words with others to create ideas that stood out. This was where the word 'Microsoft Teams' stood out to me instantly.",
+      p4p4: "I took the idea of the Microsoft Teams window, and sketched it out. Originally, I wanted the game scene to be the entire screen and its surroundings, but I figured out that if I did that the play area would become way too small, and would take away from the overall game and user experience, which I was taught about in my previous projects. I proceeded to take the sketches I made, and further developed them in Illustrator.",
+      p4p5: "Through working with my own game, I was taught the use of activity- and state machine diagrams, which are used to plan the more complicated interactive flow. These diagrams are especially handy when having elements such as timers and buttons to give yourself a broader view. All these elements were all small on their own, but in a game setting where they all work along each other, it became its own creation.",
+      p4p6: "The principles from css and javascript that I was taught here, I will be able to carry on later in my professional career to develop more advanced websites and apps, such as this portfolio site.",
+
+      p5h1: "Video and Editing",
+      p5h2: "Website redesign",
+      p5h3: "Incomplete site",
+      p5p1: "This project gave me a basic introduction to video production, including the processing before the actual recording, the recording itself, and post-production. For my group's project, we used a group member's professional camera for recording video and external sounds, while using Premiere Pro and Audition for editing.",
+      p5p2: "I was introduced to the basic concepts in video and photo production, and I had to use the skills I had acquired in the previous projects to redesign a company's website in accordance with research, concept drawings and slight testing. My main area of responsibility in this project was mainly programming the main page, as I was on holiday for some of the project duration.",
+      p5p3: "We found the restaurant 'Gravy' early, as it was close by and we would be able to talk to the owner of the restaurant and get proper video footage for the site. Their original site was made with a website builder, so we thought it would be due for a redesign.",
+      p5p4: "While the group had a few rough spots, we got the recording done within the first week and started editing while the rest of us started working on the sketches for the site. The ideas for the site shifted a lot throughout the project's timeline, and in the end, it was a spur of the moment that made us decide on the look.",
+      p5p5: "The site is rather incomplete, and not my proudest work, but it did teach me a lot about group work, and how to assign the different responsibilities better. The new Gravy site only has 1 page that is available, and we plan on working on it further in the future as we would like to see it finished.",
+      p5p6: "What I took with me from this project was a big amount of experience with videography and video editing, while also learning about how I can put videos onto websites and manipulate them further there.",
+
+      p6h1: "Exam project",
+      p6h2: "Additional features",
+      p6h3: "Horizontal scrolling",
+      p6h4: "Project pages",
+      p6p1: "In this project, I had to design my own portfolio to be able to display my work to the fullest, and be able to convey what I have learned to the educators of my university. My main objective for the site was to create an interesting and stand-out experience for the user, while also showing some of my own personality on the page itself.",
+      p6p2: "I used what I learned about the Laws of Gestalt from theme 2 & 3, to make the front page remain simple, while still being able to convey the message of it being a portfolio site.On the main page, there is a burger menu which folds out to reveal my projects that I have made throughout the semester.",
+      p6p3: "As I wanted to make my portfolio stand out, I added customizability to make sure the user gets to experience the portfolio the exact way that they would want to. I therefore added a Light / Dark theme button, which switches between lighter and darker colours. Lastly I added a language switch, which means I can use this portfolio for both English and Danish speakers. These buttons are a place where they are easily accessible, for the best user experience.",
+      p6p4: "The main feature of my portfolio is the main page scrolling, as it does not act as your usual vertical scrolling. The horizontal scrolling is not the most user friendly as vertical scrolling is the navigational norm. As it is violating users expectations, but allows the users to experience my portfolio as a story reading it from left to right, instead of downwards. I used my knowledge from theme 4 about Javascript to be able to code this.",
+      p6p5: "Each project page explains what I was taught, how I used it, and displays pictures of each project. At the top of the page, it displays the tags associated with the project, letting the user glance over them.",
+      p6p6: "What I learned from this project was how to use my acquired knowledge that I got from the different themes, in a more professional environment, and actually use my own ideas to develop something that is truly mine and unique.",
+
+      cv: "My CV",
+      cvh1: "June 2015 - March 2017",
+      cvh2: "March 2017 - December 2018",
+      cvh3: "January 2021 - March 2022",
+      cvh4: "April 2022 - Present",
+      cvp1: "MENY Vestamager Centeret - Hired as Serviceworker",
+      cvp2: "Responsible for the green department, provide good customer service, receive complaints, handle packaging and shipping notifications. Cleaning and other overdue tasks.",
+      cvp3: "COOP Daglig Brugsen Løjtegårdsvej - Hired as Store Assisstant",
+      cvp4: "Cashiering and reconciliation of the cash register, ensuring bake-off, which involved baking bread and restocking. In addition, restocking of goods in the store and other overdue work. Training of new employees in both cashiering and tasks related to bake-off.",
+      cvp5: "LIDL - Hired as Sales Leader in new opened store in Tårnby",
+      cvp6: "Cashiering and reconciliation of the cash register, and counting of the money safe. In addition, restocking of goods in the store and other overdue work. Training of new employees. Responsible for the operation and closing responsibilities so that the store is clean and tidy when another colleague takes over the operation.",
+      cvp7: "Dragør Municipality - Hired as Citizens Consultant",
+      cvp8: "Handling citizens, as well as counting the safe, furthermore closing the retail area, as well as other work that has lapsed. Scanning and updating driver's license and passport records. Responsible for providing help with MITID to citizens and colleagues.",
+
+      viewCV: "View CV",
+      viewPage: "View Page",
+      viewExtra: "View Extra Documentation",
+    },
+
+    // Danish Language
+    da: {
+      heroMe: `Jeg er en <span class="primary">Multimedie Design Studerende</span>`,
+      heroDesc: "Mark Hjort - Portfolio",
+      aboutmeTitle: "Om Mig",
+      aboutmeDesc:
+        "Jeg er Mark, en Multimediedesign Studerende, der i øjeblikket studerer på Københavns Erhvervsakademi. Før jeg startede med Multimediedesign, var jeg usikker på hvad jeg ville, hvilket er grunden til at jeg startede med Biologi, men hurtigt fandt ud af at jeg ville have brug for mere kreative stimuli, hvilket er grunden til at jeg droppede ud og startede med Multimediedesign så snart jeg kunne.<br> <br> I min fritid producerer jeg min egen musik og spiller spil, som jeg nyder. Dette er igen en anden måde, hvorpå jeg udtrykker mig kreativt, og jeg håber at kunne bruge min musik og kreative øje i fremtidige projekter jeg laver i min professionelle karriere.<br> <br>",
+
+      project1Title: `Projekt 1 - Olyx<span class="primary">.</span>`,
+      project2Title: "Projekt 2 - Baking",
+      project3Title: "Projekt 3 - Styleable",
+      project4Title: "Projekt 4 - Meeting",
+      project5Title: "Projekt 5 - Gravy",
+      project6Title: "Projekt 6 - Portfolio",
+      viewProject: "Vis Projekt",
+
+      p1h1: "Første Projekt",
+      p1h2: "Krav",
+      p1h3: "Takeaways",
+      p1p1: "Olyx, som var mit første webudviklingsprojekt var en lærerig oplevelse som ingen anden, og målet med projektet var at give mig fundamentet for resten af min uddannelse. Dette første projekt gav en grundlæggende introduktion til de mest anvendte værktøjer i en multimediedesigners værktøjskasse.",
+      p1p2: "Jeg blev introduceret til de grundlæggende faglige begreber indenfor digital design, såsom brugergrænseflader, produktion af digitalt indhold, digital kommunikation og responsive webdesigns, mens jeg også lærte om processen med at oprette en webside med brug af html og css, for at få hands-on erfaring med forberedelse af grafiske elementer og billeder i programmer som Photoshop.",
+      p1p3: "Til dette projekt fik jeg en specifik wireframe at følge for layoutet af siden. Hjemmesiden skulle have en navigationslinje, afsnit og overskrifter, alle placeret inden for et specificeret gitter layout.",
+      p1p4: "Andre krav til dette projekt indebar brug af en webfont fra googlefonts, hvor jeg besluttede at bruge 'JetBrains Mono', da jeg fandt den egnet til en tech virksomhed og nem at læse.",
+      p1p5: "Mens jeg lavede 'Projekt - 1 Olyx' var de største udfordringer og problemer mangel på erfaring, og hvordan jeg skulle lære mange nye elementer gennem projektet. Men da jeg havde noget forudgående erfaring med oprettelse af hjemmesider, var jeg i stand til at oprette en side, som jeg kan se tilbage på og være stolt af.",
+
+      p2h1: "Website med Stil",
+      p2h2: "Love om UX / UI",
+      p2h3: "Figma & Fonts",
+      p2p1: "Under det grundlæggende webtema skulle jeg lave en website med en stil. Jeg fik valget mellem flere stilarter, lige fra postmodernisme til minimalisme, hvor jeg valgte stilen kaldet brutalisme. Brutalisme, også kendt som Anti-Design, er en stil, hvor man tager de standard design valg og love som gestalt, og man vælger derefter ikke at bruge dem.",
+      p2p2: "I dette projekt lærte jeg om de forskellige love og principper i UX / UI, og hvordan man bruger dem til at skabe en god brugeroplevelse, men da jeg fik til opgave at oprette en side med brutalisme, fik jeg ikke mulighed for at bruge disse designfilosofier til dette projekt. Nogle af lovene for UX / UI som jeg blev undervist i var; Loven om Prægnans, Nærhedsloven & Lukkethed, som alle er under Gestaltlovene.",
+      p2p3: "Siden ligner et notat / stykke papir, som vi alle har skrevet en opskrift på, hvilket er grunden til at den ikke tillader dig at scrolle, og de eneste ting der er repræsenteret på siden, er opskrifterne selv og små tegninger.",
+      p2p4: "Hvad jeg lærte af dette projekt, var hvordan jeg kan oprette mine egne skrifttyper ved hjælp af Illustrator, hvordan jeg redigerer billeder ved hjælp af Photoshop og hvordan jeg kan oprette mine egne wireframes og skitser ved hjælp af Figma eller Adobe XD. Jeg foretrækker dog Figma, da jeg har mere erfaring med dette i forhold til min erfaring med Adobe XD.",
+
+      p3h1: "UX / UI idag",
+      p3h2: "Faser",
+      p3h3: "Læringsoplevelse",
+      p3p1: "UX / UI er i dag en fast komponent i udviklingen af digitale brugergrænseflader og brugeroplevelser. Dette projekt blev lavet i det grundlæggende UX-tema for at give mig en grundlæggende forståelse af interaktionen mellem brugere og brugergrænseflader, samt hvilke teorier, værktøjer og metoder, jeg kan bruge til forskning, design og test i en digital produktudvikling cyklus.",
+      p3p2: "Forståelse af denne interaktion er vigtig, da designvalg og produktudvikling er baseret på konkrete viden om reelle brugere i stedet for mavefornemmelser og øjeblikkelige antagelser, hvilket er grunden til at jeg blev bedt om at oprette et design til en webshop, der vil have et 'Unique Selling Point'.",
+      p3p3: "Dette projekt, som jeg vil kalde Styleable, blev jeg undervist i de forskellige faser af at skabe en hjemmeside fra bunden. Fra konceptfasen, helt til at præsentere det for en kunde.",
+      p3p4: "I konceptfasen skulle vi konceptualisere en webshop, med en sælger, en køber, et målrettet publikum og det “Unique Selling Point”. Vi brugte forskellige idegenerering metoder, såsom 'Art Gallery' metoden.",
+      p3p5: "Det førte mig videre til research fasen. I researchfasen blev jeg undervist i forskellige metoder til indsamling af forskning, såsom deskresearch, observationer, interviews og surveys. Da det er vigtigt at have den rette forskning bag sig, når man videre udvikling det produkt, man har fra konceptfasen.",
+      p3p6: "Efter jeg følte at jeg havde den rette research, gik jeg tilbage til min konceptfase, som også fungerede som en udviklingsfase, dette var hvor jeg lavede mit andet koncept, som var det jeg brugte under min testfase. Her brugte jeg Figma, Photoshop og Adobe XD i samarbejde med hinanden for at skabe et ordentligt udseende webbutik app.",
+      p3p7: "Den sidste fase jeg arbejdede med var test- og præsentationsfasen. Her blev undervist i de forskellige måder at teste hjemmesider og koncepter på, såsom 5-sekunders test og generelle brugertest. Det var her, jeg fik mulighed for at få brugerfeedback for at videreudvikle, og ændre projektet i overensstemmelse med kunden, som vi til sidst fik mulighed for at præsentere foran.",
+      p3p8: "Det jeg lærte fra dette projekt, var den generelle udviklingscyklus fra idé til pitch, og hvordan jeg i fremtiden kan bruge den til at oprette mine egne projekter og arbejde sammen med brugere for at skabe den bedste brugeroplevelse. Jeg fik også erfaring med at præsentere et koncept for en potentiel køber, og hvordan jeg i fremtiden kan præsentere bedre med en mere direkte tilgang.",
+
+      p4h1: "Introduktion til Javascript",
+      p4h2: "Start",
+      p4h3: "Flere elementer",
+      p4p1: "I dette projekt blev jeg introduceret for programmeringssproget javascript, som er en uundværlig del af det moderne internet og bruges til at kode avancerede og dynamiske hjemmesider samt lave interaktive elementer såsom burger-menuer, slideshows, snap scrolls osv.",
+      p4p2: "Jeg valgte at bruge javascript sammen med css-animationer til at oprette et lille spil. Mit spil skulle have et koncept og en idé, som jeg selv kom op med, og jeg skulle designe alle elementer selv, og koden til spillet skulle laves fra bunden.",
+      p4p3: "Til at starte med blev jeg introduceret til forskellige ord association teknikker, som jeg brugte til at skabe de fleste af mine ideer. Hvor jeg kombinerede ord med andre for at skabe ideer, der stak ud. Det var her ordet 'Microsoft Teams' straks stod ud for mig.",
+      p4p4: "Jeg tog idéen om Microsoft Teams-vinduet og skitserede den. Oprindeligt ville jeg have at spil scenen skulle være hele skærmen og omgivelserne, men jeg fandt ud af at hvis jeg gjorde det, ville spilleområdet blive for lille, og det ville tage væk fra det samlede spil og brugeroplevelsen, som jeg blev undervist om i mine tidligere projekter. Jeg fortsatte derefter med at udvikle mine skitser i Illustrator.",
+      p4p5: "Gennem arbejdet med mit eget spil, blev jeg undervist i brugen af aktivitets- og statemachine  diagrammer, som bruges til at planlægge den mere komplicerede interaktive flow. Disse diagrammer er især nyttige, når man har elementer som timer og knapper, for at give sig selv et bredere overblik. Alle disse elementer var små på egen hånd, men i en spilindstilling hvor de alle samarbejder blev det til sit eget projekt.",
+      p4p6: "De principper fra css og javascript som jeg lærte her, vil jeg kunne tage med videre i min professionelle karriere for at udvikle mere avancerede hjemmesider og apps, såsom denne portfolio side.",
+
+      p5h1: "Video og Redigering",
+      p5h2: "Website redesign",
+      p5h3: "Mangelfuld hjemmeside",
+      p5p1: "Dette projekt gav mig en grundlæggende introduktion til videoproduktion, herunder forarbejdningen før man optager og efterbehandler. Til vores gruppeprojekt brugte vi en gruppe medlems professionelle kamera til at optage video og eksterne lyde, mens vi brugte Premiere Pro og Audition til at redigere.",
+      p5p2: "Jeg blev introduceret for de grundlæggende koncepter inden for videoproduktion og foto, og jeg skulle bruge de færdigheder jeg havde erhvervet i de tidligere projekter, til at redesigne en virksomheds hjemmeside i henhold til research, koncept tegninger og test. Mit primære ansvarsområde i dette projekt var primært programmering af forsiden, da jeg var på ferie i noget af projektets varighed.",
+      p5p3: "Vi fandt restauranten Gravy tidligt da den lå tæt på, og vi ville kunne tale med ejeren af restauranten og få ordentligt videomateriale til hjemmesiden. Deres originale hjemmeside var lavet med en hjemmeside bygger, så vi mente at det var på tide med en redesign.",
+      p5p4: "Selv om gruppen havde et par problemer, fik vi optagelsen klaret inden for den første uge og begyndt at redigere, mens resten af os begyndte at arbejde på skitserne til siden. Idéerne til siden skiftede meget gennem projektets tidslinje, og til sidst var det et spontant øjeblik der fik os til at vælge hvad vi gik imod.",
+      p5p5: "Siden er desværre ret mangelfuld og ikke mit stolteste arbejde, men den lærte mig meget om gruppearbejde og hvordan man tildeler de forskellige ansvar bedre. Den nye Gravy-side har kun én side der er tilgængelig, og vi planlægger at arbejde videre på den i fremtiden da vi gerne vil se den færdiggjort.",
+      p5p6: "Det jeg tog med mig fra dette projekt var en masse erfaring med videografi og videoredigering, samtidig med at jeg lærte om,hvordan jeg kan få videoer på hjemmesider og manipulere dem yderligere der.",
+
+      p6h1: "Eksamens projekt",
+      p6h2: "Yderligere funktioner",
+      p6h3: "Horisontal scrolling",
+      p6h4: "Projektsider",
+      p6p1: "I dette projekt skulle jeg designe mit eget portfolio for at kunne vise mit arbejde og kunne formidle hvad jeg har lært til professorerne på mit studie. Mit primære mål for hjemmesiden var at skabe en interessant og unik oplevelse for brugeren, mens jeg også viste noget af min egen personlighed på siden.",
+      p6p2: "Jeg brugte det jeg lærte om Gestalt-lovene fra tema 2 & 3, for at gøre forsiden enkel, mens den stadig kunne formidle budskabet om, at det er en portfolio site. På forsiden er der en burgermenu, der kan foldes ud for at vise mine projekter, som jeg har lavet gennem semesteret.",
+      p6p3: "Da jeg ville gøre min portfolio unikt, tilføjede jeg tilpasnings muligheder for at sikre at brugeren oplever portfolioet præcis som de ønsker. Derfor tilføjede jeg en knap for Lys/Mørkt tema, som skifter mellem lysere og mørkere farver. Til sidst tilføjede jeg en sprogskift-knap, som betyder at jeg kan bruge dette portfolio til både engelsktalende og dansktalende brugere. Disse knapper er placeret, hvor de er nemt tilgængelige for den bedste brugeroplevelse.",
+      p6p4: "Det vigtigste træk ved min portefølje er, at forsiden scroller horisontalt i stedet for den normale vertikale scrolling. Den horisontale scrolling er ikke den mest brugervenlige, da vertical scrolling er normen. Det er en ‘krænkelse’ af brugerens forventninger, men giver brugerne mulighed for at opleve mit portfolio som en historie, der læses fra venstre mod højre i stedet for nedad. Jeg brugte min viden fra tema 4 om Javascript til at kunne kode dette.",
+      p6p5: "Hver projektside forklarer hvad jeg blev undervist i, hvordan jeg brugte det, og viser billeder af hvert projekt. Øverst på siden vises tags, der er tilknyttet med projektet så brugeren hurtigt kan skimme dem.",
+      p6p6: "Hvad jeg lærte af dette projekt var hvordan jeg kunne bruge min viden fra de forskellige temaer i en mere professionel kontekst, og faktisk bruge mine egne ideer til at udvikle noget der er helt mit eget og unikt.",
+
+      cv: "Mit CV",
+      cvh1: "Juni 2015 - Marts 2017",
+      cvh2: "Marts 2017 - December 2018",
+      cvh3: "Januar 2021 - Marts 2022",
+      cvh4: "April 2022 - Nu",
+      cvp1: "MENY Vestamager Centeret - Ansat som Servicemedarbejder",
+      cvp2: "Ansvarlig for grøntafdelingen, yde god kundeservice, tage imod reklamationer, håndtering af paknings og forsendelsesmeddelelser. Rengøring og andre forfaldne opgaver.",
+      cvp3: "COOP Daglig Brugsen Løjtegårdsvej - Ansat som Butiksassistent",
+      cvp4: "Kassebetjening samt afstemning af kassen, sørge for bake-off, som omhandlede bagning af brød og opfyldning. Herudover opfyldning af vare i butikken samt andet forfalden arbejde. Oplæring af nye medarbejdere både indenfor kassebetjening og opgaver i forbindelse med bake-off.",
+      cvp5: "LIDL - Ansat som Salgsleder i nyåbnet butik i Tårnby",
+      cvp6: "Kassebetjening samt afstemning af kassen, og optælling af pengeskab, Herudover opfyldning af vare i butikken, samt andet forfalden arbejde. Oplæring af nye medarbejdere. Ansvarlig for driften, og lukkeansvarlig således at butikken fremstår pæn og ryddelig når anden kollega overtager driften.",
+      cvp7: "Dragør Municipality - Ansat som Borgerkonsulent",
+      cvp8: "Betjening af borgere, samt afstemning af pengeskab, Herudover lukning af butiksareal, samt andet forfalden arbejde. Scanning og opdatere af kørekort og pas arkiver. Ansvarlig for MITID hjælp til borgere og kollegaer.",
+
+      viewCV: "Se CV",
+      viewPage: "Se Side",
+      viewExtra: "Se Extra Documentation",
+    },
+  };
+
+  let lang = localStorage.getItem("lang") === "danish";
+
+  const allElements = this.document.querySelectorAll("*");
+
+  function saveTranslation() {
+    localStorage.setItem("lang", lang ? "danish" : "english");
+
+    englishElement.style = `display: ${lang ? "none" : "block"}`;
+    danishElement.style = `display: ${!lang ? "none" : "block"}`;
+
+    for (let i = 0; i < allElements.length; i++) {
+      /** @type {HTMLElement} */
+      const element = allElements.item(i);
+      const trans = element.dataset.trans;
+
+      if (!trans) continue;
+
+      element.innerHTML =
+        langs[lang ? "da" : "en"][trans] ?? `No translation found for ${trans}`;
+    }
+  }
+
+  function toggleLang() {
+    lang = !lang;
+
+    saveTranslation();
+  }
+
+  languageSwitchElement.addEventListener("click", function (e) {
+    e.preventDefault();
+    toggleLang();
+  });
+
+  saveTranslation();
+</script>

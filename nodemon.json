@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json.schemastore.org/nodemon.json",
+  "watch": ["src/**/*", "build.js"],
+  "ext": "js, css, html",
+  "exec": "yarn build && yarn serve"
+}

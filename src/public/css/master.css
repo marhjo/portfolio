@@ -1,0 +1,114 @@
+:root {
+  --font-title: "Space Grotesk";
+  --font-mono: "Jetbrains Mono";
+  --font-main: "Inter", sans-serif;
+
+  --colour-primary: #e63697;
+  --colour-text: hsl(0, 0%, 96%);
+  --colour-text2: #bdbdbd;
+  --colour-base: #121212;
+  --colour-secondary: #252525;
+  --colour-overlay: #ffffff2c;
+}
+
+.light:root {
+  --colour-primary: #e63697;
+  --colour-text: #121212;
+  --colour-text2: rgb(59, 59, 59);
+  --colour-base: #f5f5f5;
+  --colour-secondary: rgb(224, 224, 224);
+  --colour-overlay: #00000027;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  font-family: var(--font-main);
+  color: var(--colour-text);
+}
+
+.primary {
+  color: var(--colour-primary);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--colour-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-title);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+#hero h1 {
+  font-size: 60px;
+  max-width: min(550px, 65%);
+  margin-bottom: 2rem;
+}
+
+#hero h3 {
+  max-width: min(550px, max(65%, 85vw));
+  font-weight: 400;
+  font-family: var(--font-main);
+}
+
+#aboutme p {
+  font-weight: 400;
+  font-family: var(--font-main);
+}
+
+#burger button {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background: transparent;
+  color: var(--colour-text);
+
+  border-radius: 0.5rem;
+}
+
+#burger button:hover {
+  background: var(--colour-overlay);
+}
+
+#links a {
+  font-size: 30px;
+  font-family: var(--font-title);
+  text-align: center;
+
+  transition-duration: 300ms;
+  transition-property: box-shadow, background, border-color, color, fill, stroke,
+    font-size;
+}
+
+#links a:hover {
+  font-size: 45px;
+}

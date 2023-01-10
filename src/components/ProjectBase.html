@@ -1,0 +1,31 @@
+<header class="container">
+  <div class="content">
+    <a href="/">Portfolio<span class="primary">.</span></a>
+  </div>
+</header>
+
+<link rel="stylesheet" href="/css/project.css" />
+
+<script>
+  let percentElement;
+
+  function onScroll() {
+    if (!percentElement) {
+      percentElement = document.querySelector("#perc");
+    }
+
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrolled = (winScroll / height) * 100;
+
+    percentElement.innerText = `${Math.round(scrolled || 0)}%`;
+  }
+
+  addEventListener("scroll", () => onScroll());
+  addEventListener("resize", () => onScroll());
+</script>

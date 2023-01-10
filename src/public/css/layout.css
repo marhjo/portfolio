@@ -1,0 +1,144 @@
+#content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+#content > div {
+  height: 100vh;
+  padding: 4rem;
+}
+
+#scroll {
+  height: 5000px;
+}
+
+#hero {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#herobg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#burger_holder {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: calc(100vw - 4rem);
+  right: calc(4rem - 100vw);
+
+  transition-property: box-shadow, background, border-color, color, fill, stroke,
+    left, right;
+  transition-duration: 500ms;
+}
+
+#burger {
+  display: flex;
+  background: var(--colour-secondary);
+}
+
+#burger nav {
+  width: 4rem;
+  height: 100vh;
+  padding: 0.75rem;
+  gap: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#burger_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#perc {
+  transform: rotate(90deg);
+  margin-bottom: 0.75rem;
+}
+
+#links {
+  width: 100%;
+  height: 100vh;
+  padding-right: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#aboutme {
+  margin-left: -2rem;
+}
+
+div#aboutme {
+  height: 100vh;
+  width: 600px;
+  padding: 4rem 6rem !important;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  border-left: 2px solid var(--colour-overlay);
+}
+
+#aboutme h3 {
+  font-size: 40px;
+}
+
+div.project {
+  border-left: 2px solid var(--colour-overlay);
+  width: max(500px, 50vw);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.img1,
+.img2 {
+  object-fit: scale-down;
+  border-radius: 1rem;
+  border: 2px solid var(--colour-overlay);
+  height: 35vh;
+  margin-bottom: 1rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text h5 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.text button,
+.container button,
+#aboutme button,
+.button {
+  border-radius: 0.5rem;
+  background: var(--colour-primary);
+  color: white;
+  width: fit-content;
+  padding: 0.7rem 1rem;
+  font-size: 14px;
+}

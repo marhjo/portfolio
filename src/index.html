@@ -1,0 +1,188 @@
+<div id="scroll"></div>
+
+<section id="content">
+  <!-- Hero Landing -->
+  <div id="hero">
+    <svg
+      id="herobg"
+      viewBox="0 0 960 540"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      preserveAspectRatio="none"
+    >
+      <rect
+        x="0"
+        y="0"
+        width="960"
+        height="540"
+        fill="var(--colour-base)"
+      ></rect>
+      <g transform="translate(960, 0)">
+        <path
+          d="M0 486C-68.9 481.9 -137.8 477.8 -183.3 442.5C-228.8 407.3 -250.8 340.9 -297 297C-343.2 253.1 -413.5 231.7 -449 186C-484.5 140.2 -485.3 70.1 -486 0L0 0Z"
+          fill="var(--colour-overlay)"
+        ></path>
+      </g>
+      <g transform="translate(0, 540)">
+        <path
+          d="M0 -486C59.4 -466.8 118.7 -447.7 176 -425C233.3 -402.3 288.6 -376.1 336.6 -336.6C384.6 -297.1 425.3 -244.3 449 -186C472.7 -127.7 479.3 -63.8 486 0L0 0Z"
+          fill="var(--colour-overlay)"
+        ></path>
+      </g>
+    </svg>
+
+    <h1 data-trans="heroMe">Hero Title</h1>
+
+    <h3 data-trans="heroDesc">Hero Describtion</h3>
+  </div>
+
+  <!-- About Me -->
+  <div id="aboutme">
+    <h3 data-trans="aboutmeTitle">About Me Title</h3>
+
+    <p data-trans="aboutmeDesc">About Me Describtion</p>
+
+    <a href="/cv" data-trans="viewCV" class="button"> View CV </a>
+
+    <div class="center">
+      <img src="/img/projects/test.png" alt="" height="550" />
+    </div>
+  </div>
+
+  <!-- Project 1 Olyx -->
+  <div class="project">
+    <img src="/img/projects/olyx1.png" alt="" class="img1" />
+
+    <img src="/img/projects/olyx2.png" alt="" class="img2" />
+
+    <div class="text">
+      <h5 data-trans="project1Title">Project Title 1</h5>
+
+      <a href="/project1" data-trans="viewProject" class="button">
+        View Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Project 2 Baking -->
+  <div class="project">
+    <img src="/img/projects/baking1.png" alt="" class="img1" />
+
+    <img src="/img/projects/baking2.png" alt="" class="img2" />
+
+    <div class="text">
+      <h5 data-trans="project2Title">Project Title 2</h5>
+
+      <a href="/project2" data-trans="viewProject" class="button">
+        View Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Project 3 Styleable -->
+  <div class="project">
+    <img src="/img/projects/styleable1.png" alt="" class="img1" />
+
+    <img src="/img/projects/styleable2.png" alt="" class="img2" />
+
+    <div class="text">
+      <h5 data-trans="project3Title">Project Title 3</h5>
+
+      <a href="/project3" data-trans="viewProject" class="button">
+        View Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Project 4 Meeting -->
+  <div class="project">
+    <img src="/img/projects/meeting1.png" alt="" class="img1" />
+
+    <img src="/img/projects/meeting2.png" alt="" class="img2" />
+
+    <div class="text">
+      <h5 data-trans="project4Title">Project Title 4</h5>
+
+      <a href="/project4" data-trans="viewProject" class="button">
+        View Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Project 5 Gravy -->
+  <div class="project">
+    <img src="/img/projects/gravy1.png" alt="" class="img1" />
+
+    <img src="/img/projects/gravy2.png" alt="" class="img2" />
+
+    <div class="text">
+      <h5 data-trans="project5Title">Project Title 5</h5>
+
+      <a href="/project5" data-trans="viewProject" class="button">
+        View Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Project 6 Portfolio -->
+  <div class="project">
+    <img src="/img/projects/port1.png" alt="" class="img1" />
+
+    <img src="/img/projects/port2.png" alt="" class="img2" />
+
+    <div class="text">
+      <h5 data-trans="project6Title">Project Title 6</h5>
+
+      <a href="/project6" data-trans="viewProject" class="button">
+        View Project
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Horizontal / Percent Script -->
+<script>
+  const content = document.getElementById("content");
+  const scrollElement = document.getElementById("scroll");
+  let percentElement;
+
+  /** @type {HTMLElement[]} */
+  const children = [];
+
+  let totalWidth = 0;
+
+  for (let i = 0; i < content.children.length; i++) {
+    children.push(content.children.item(i));
+  }
+
+  const resize = () => {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+
+    totalWidth = content.offsetWidth + 4 * 16;
+
+    scrollElement.style = `height: ${totalWidth - width + height}px`;
+
+    onScroll();
+  };
+
+  function onScroll() {
+    const distance = window.scrollY;
+    const width = window.innerWidth;
+
+    const target = totalWidth - width;
+
+    content.style = `left: -${distance}px`;
+
+    if (!percentElement) {
+      percentElement = document.querySelector("#perc");
+    }
+
+    percentElement.innerText = `${Math.round((distance / target) * 100)}%`;
+  }
+
+  addEventListener("scroll", () => onScroll());
+  addEventListener("resize", () => resize());
+  resize();
+</script>
